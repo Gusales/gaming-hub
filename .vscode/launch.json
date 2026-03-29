@@ -17,6 +17,17 @@
       "preLaunchTask": "npm: test",
       "url": "http://localhost:9876/debug.html",
       "cwd": "${workspaceFolder}/frontend"
+    },
+    {
+      "name": "Backend: npm run dev",
+      "type": "node",
+      "request": "launch",
+      "args": ["${workspaceFolder}/backend/src/main.ts"],
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register", "-r", "tsconfig-paths/register"],
+      "sourceMaps": true,
+      "envFile": "${workspaceFolder}/backend/.env",
+      "cwd": "${workspaceRoot}/backend",
+      "console": "integratedTerminal",
     }
   ]
 }
